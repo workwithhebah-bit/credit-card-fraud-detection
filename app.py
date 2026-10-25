@@ -12,7 +12,7 @@ st.title("Credit Card Fraud Detection")
 mode = st.radio("How do you want to test?", ["Pick a real example", "Enter values manually"])
 
 if mode == "Pick a real example":
-    df = pd.read_csv('creditcard.csv')
+    df = pd.read_csv('creditcard_sample.csv')
     examples = pd.concat([
         df[df['Class'] == 1].sample(10, random_state=1),
         df[df['Class'] == 0].sample(10, random_state=1)
